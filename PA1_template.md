@@ -1,3 +1,7 @@
+``` r
+knitr::opts_chunk$set(fig.path='Figs/')
+```
+
 R Markdown
 ----------
 
@@ -49,7 +53,7 @@ StepsPerDay <- tapply(activityData$steps, activityData$date, sum, na.rm=TRUE)
 qplot(StepsPerDay, xlab='Total Steps per Day', ylab='Frequency using binwidth 500', binwidth=500)
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](Figs/unnamed-chunk-5-1.png)
 
 ##### C. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -84,9 +88,9 @@ ggplot(data=avgStepsPer5Min, aes(x=interval, y=meanSteps)) +
   ylab("Average number of steps taken") 
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-8-1.png)
-\#\#\#\#\# B. Which 5-minute interval, on average across all the days in
-the dataset, contains the maximum number of steps?
+![](Figs/unnamed-chunk-8-1.png) \#\#\#\#\# B. Which 5-minute interval,
+on average across all the days in the dataset, contains the maximum
+number of steps?
 
 ``` r
 maxstepsinterval <- which.max(avgStepsPer5Min$meanSteps)
@@ -128,7 +132,7 @@ StepsPerDayImputed <- tapply(activityDataImputed$steps, activityDataImputed$date
 qplot(StepsPerDayImputed, xlab='Total steps per day (Imputed)', ylab='Frequency using binwidth 250', binwidth=250)
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![](Figs/unnamed-chunk-13-1.png)
 
 ##### E. Calculate and report the mean and median total number of steps taken per day.
 
@@ -168,4 +172,4 @@ ggplot(averageActivityDataImputed, aes(interval, steps)) +
   ylab("avarage number of steps")+ ggtitle("Average Activity Weekdays vs Weekends")
 ```
 
-![](PA1_template_files/figure-markdown_github/unnamed-chunk-16-1.png)
+![](Figs/unnamed-chunk-16-1.png)

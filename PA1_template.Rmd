@@ -2,8 +2,15 @@
 title: "PA1_template.Rmd"
 author: "Me"
 date: "1/29/2021"
-output: html_document
+output:
+  html_document:
+    df_print: paged
+  md_document:
+    variant: markdown_github
 ---
+```{r global_options}
+knitr::opts_chunk$set(fig.path='Figs/')
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
